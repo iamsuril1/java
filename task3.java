@@ -23,7 +23,7 @@ class Car extends Vehicle {
     }
     @Override
     public double fuelEfficiency() {
-        return fuelConsumption; // km per liter
+        return fuelConsumption; 
     }
     @Override
     public double topSpeed() {
@@ -32,32 +32,28 @@ class Car extends Vehicle {
 }
 
 class Bike extends Vehicle {
-    private double fuelEfficiency; // in km per liter
+    private double fuelEfficiency; 
     public Bike(String model, int year, double fuelEfficiency) {
         super(model, year);
         this.fuelEfficiency = fuelEfficiency;
     }
     @Override
     public double fuelEfficiency() {
-        return fuelEfficiency; // km per liter
+        return fuelEfficiency; 
     }
     @Override
     public double topSpeed() {
-        return 120.0; // Top speed in km/h (for example)
+        return 120.0; 
     }
 }
-
-// Main class to test the functionality
 public class task3 {
     public static void main(String[] args) {
-        // Creating a Car object
-        Vehicle car = new Car("Toyota Camry", 2022, 50.0, 15.0); // 50L tank, 15 km/l
+    
+        Vehicle car = new Car("Toyota Camry", 2022, 50.0, 15.0); 
         car.getDetails();
         System.out.println("Fuel Efficiency: " + car.fuelEfficiency() + " km/l");
         System.out.println("Top Speed: " + car.topSpeed() + " km/h");
-
-        // Creating a Bike object
-        Vehicle bike = new Bike("Yamaha R15", 2021, 40.0); // 40 km/l
+        Vehicle bike = new Bike("Yamaha R15", 2021, 40.0); 
         bike.getDetails();
         System.out.println("Fuel Efficiency: " + bike.fuelEfficiency() + " km/l");
         System.out.println("Top Speed: " + bike.topSpeed() + " km/h");
