@@ -1,5 +1,4 @@
-import java.io.File;
-
+import java.io.*;
 public class task10 {
     public static void main(String[] args) {
         File file = new File("myFile.txt");

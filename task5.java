@@ -13,13 +13,15 @@ public class task5 {
         Matcher matcher = pattern.matcher(password);
         return matcher.matches();
     }
+
     public static void main(String[] args) {
-        String email = "test@example.com";
+        String email = "surilpokharel3@gmail.com";
         if (isValidEmail(email)) {
             System.out.println("Valid email address.");
         } else {
             System.out.println("Invalid email address.");
         }
+
         String password = "Password123!";
         if (isValidPassword(password)) {
             System.out.println("Valid password.");

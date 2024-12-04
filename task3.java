@@ -1,4 +1,3 @@
-
 abstract class Vehicle {
     private String model;
     private int year;
@@ -14,11 +13,10 @@ abstract class Vehicle {
     }
 }
 class Car extends Vehicle {
-    private double fuelCapacity; 
     private double fuelConsumption; 
-    public Car(String model, int year, double fuelCapacity, double fuelConsumption) {
+
+    public Car(String model, int year, double fuelConsumption) {
         super(model, year);
-        this.fuelCapacity = fuelCapacity;
         this.fuelConsumption = fuelConsumption;
     }
     @Override
@@ -30,9 +28,9 @@ class Car extends Vehicle {
         return 180.0; 
     }
 }
-
 class Bike extends Vehicle {
     private double fuelEfficiency; 
+
     public Bike(String model, int year, double fuelEfficiency) {
         super(model, year);
         this.fuelEfficiency = fuelEfficiency;
@@ -48,11 +46,11 @@ class Bike extends Vehicle {
 }
 public class task3 {
     public static void main(String[] args) {
-    
-        Vehicle car = new Car("Toyota Camry", 2022, 50.0, 15.0); 
+        Vehicle car = new Car("Toyota Camry", 2022, 15.0); 
         car.getDetails();
         System.out.println("Fuel Efficiency: " + car.fuelEfficiency() + " km/l");
         System.out.println("Top Speed: " + car.topSpeed() + " km/h");
+
         Vehicle bike = new Bike("Yamaha R15", 2021, 40.0); 
         bike.getDetails();
         System.out.println("Fuel Efficiency: " + bike.fuelEfficiency() + " km/l");

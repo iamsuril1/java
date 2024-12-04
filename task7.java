@@ -1,7 +1,4 @@
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-
+import java.io.*;
 public class task7 {
     public static void main(String[] args) {
         try {
@@ -11,7 +8,6 @@ public class task7 {
             } else {
                 System.out.println("File already exists.");
             }
-
             FileWriter writer = new FileWriter(file);
             writer.write("Java is a high level programming language.");
             writer.close();
